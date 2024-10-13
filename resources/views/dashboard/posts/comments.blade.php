@@ -19,7 +19,7 @@
 
                         <div class="mb-3">
                             <label for="content" class="form-label">Comment</label>
-                            <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+                            <textarea class="form-control" id="content" name="content" rows="3" style="resize: none;"></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary">Add</button>
@@ -59,8 +59,8 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>
-                                            <p class="mb-0">{{ $comment->content }}</p>
+                                        <td class="align-middle">
+                                            <p class="mb-0 text-truncate" style="max-width: 300px;">{{ $comment->content }}</p>
                                             <small class="text-muted">{{ $comment->created_at }}</small>
                                         </td>
                                         <td class="text-center">
@@ -105,7 +105,7 @@
 
                                                         <div class="mb-3">
                                                             <label for="content" class="form-label">Comment</label>
-                                                            <textarea class="form-control" id="content" name="content" rows="3">{{ $comment->content }}</textarea>
+                                                            <textarea class="form-control" id="content" name="content" rows="3" style="resize: none;">{{ $comment->content }}</textarea>
                                                         </div>
 
                                                         <button type="submit" class="btn btn-primary">Update</button>
@@ -159,4 +159,3 @@
         }
     </style>
 @endpush
-

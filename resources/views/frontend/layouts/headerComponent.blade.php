@@ -19,7 +19,7 @@
                                         <li><a href="">Home</a></li>
                                         <li><a href="">Find a Jobs </a></li>
                                         <li><a href="">About</a></li>
-                                        <li><a href="">Contact</a></li>
+                                        <li><a href="{{route('home.posts.index')}}">Blog</a></li>
                                         @if (Auth::user())
                                             <li><a href="{{ route('dashboard.index') }}">Dashboard</a></li>
                                         @endif

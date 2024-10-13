@@ -2,7 +2,9 @@
 <html class="no-js" lang="zxx">
 <head>
     <title> @yield('title')</title>
-    @yield('css')
+    <style>
+        @yield('css')
+    </style>
     @include('frontend.layouts.headerLinkes')
 
 </head>

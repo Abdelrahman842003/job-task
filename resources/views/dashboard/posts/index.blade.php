@@ -51,8 +51,8 @@
                                             <td>
                                                 <p class="text-xs font-weight-bold mb-0">{{ $post->title }}</p>
                                             </td>
-                                            <td>
-                                                <p class="text-xs font-weight-bold mb-0">{{ $post->content }}</p>
+                                            <td style="max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                                <p class="text-xs font-weight-bold mb-0 text-truncate">{{ Str::limit($post->content, 100) }}</p>
                                             </td>
                                             <td class="align-middle text-center text-sm">
                                                 @if ($post->status == 'active')
