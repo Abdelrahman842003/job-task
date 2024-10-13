@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard;
+namespace App\Http\Controllers\Dashboard\posts;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostsRequest;
+use App\Models\Job;
 use App\Models\Post;
 use App\Models\User;
-use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
@@ -33,8 +33,8 @@ class PostsController extends Controller
      */
     public function store(PostsRequest $request)
     {
+
         $validated = $request->validated();
-        $validated['user_id'] = auth()->user()->id; //Post::create($validated);
         Post::create($validated);
         toastr()->success(message: 'Post Created Successful');
         return redirect(route('dashboard.posts.index'));

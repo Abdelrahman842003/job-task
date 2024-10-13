@@ -19,10 +19,14 @@ return new class extends Migration
             $table->string('type'); // full-time, part-time, etc.
             $table->enum('status', ['open', 'closed'])->default('open');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // صاحب الوظيفة
+            $table->string('experience_requirements');
+            $table->integer('vacancy');
+            $table->string('salary');
+            $table->date('deadline');
             $table->timestamps();
         });
     }
-    
+
     /**
      * Reverse the migrations.
      */
